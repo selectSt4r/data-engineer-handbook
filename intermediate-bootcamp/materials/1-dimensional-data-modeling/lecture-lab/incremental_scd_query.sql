@@ -15,10 +15,10 @@ WITH last_season_scd AS (
      historical_scd AS (
         SELECT
             player_name,
-               scoring_class,
-               is_active,
-               start_season,
-               end_season
+            scoring_class,
+            is_active,
+            start_season,
+            end_season
         FROM players_scd
         WHERE current_season = 2021
         AND end_season < 2021
@@ -76,7 +76,7 @@ WITH last_season_scd AS (
      new_records AS (
 
          SELECT
-            ts.player_name,
+                ts.player_name,
                 ts.scoring_class,
                 ts.is_active,
                 ts.current_season AS start_season,
